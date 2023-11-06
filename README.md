@@ -13,9 +13,10 @@ A robust starter template to build Next.js 14 apps with integrated Prisma ORM an
 
 ## Installation 🔧
 
-1. Clone the repository
-2. Copy `.env.example` to `.env` and configure your Google credentials
-3. Run `npm install` or `pnpm install` to install dependencies
+1. Clone the repository.
+2. Copy `.env.example` to `.env` and configure your Google credentials.
+3. Run `npm install` or `pnpm install` to install dependencies.
+4. Execute `npm run prisma generate` or `pnpm prisma generate` to generate Prisma client.
 
 ## Usage 🏃
 
@@ -24,6 +25,14 @@ Run `npm run dev` or `pnpm run dev` to start the development server. Visit [http
 ## Deployment 🌐
 
 After setting up the `.env` and installing dependencies, deploy your app to a hosting service of your choice.
+
+## Project Structure 🗂
+
+An example API route is provided to demonstrate the usage and structure:
+
+- `/src/api/example/route.ts`: This file contains a brief example of how to set up an API endpoint in the Next.js environment using the template structure.
+
+Explore this example to understand how to structure your API routes within this template.
 
 ## Roadmap ✨
 
