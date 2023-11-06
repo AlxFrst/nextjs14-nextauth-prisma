@@ -1,36 +1,47 @@
-# 🚀 Next.js 14 avec Prisma et NextAuth Template
+# Next.js 14 with Prisma & NextAuth Template 🚀
 
-Ce dépôt est un modèle de démarrage 🛠️ pour créer des applications Next.js 14, intégrant Prisma comme ORM et NextAuth pour une authentification facile et sécurisée 🔒.
+## Description
 
-## Caractéristiques 🌟
+A robust starter template to build Next.js 14 apps with integrated Prisma ORM and NextAuth for easy authentication, featuring shadcn UI components for a polished UI.
 
-- **Next.js 14**: La dernière version de Next.js pour des applications React modernes.
-- **Prisma**: Un ORM puissant pour gérer la base de données de manière efficace et intuitive.
-- **NextAuth**: Une solution d'authentification intégrée pour Next.js qui prend en charge de nombreux fournisseurs.
-- **shadcn UI**: Intégration d'une bibliothèque de composants esthétiques et open source pour une interface utilisateur homogène et accessible.
+## Features 🌟
 
-## Configuration initiale 🔧
+- Next.js 14 for cutting-edge React apps
+- Prisma ORM for database management
+- NextAuth for seamless authentication
+- shadcn UI for beautiful, open-source UI components
 
-Pour configurer le projet, copiez le fichier `.env.exemple` en `.env` et renseignez vos identifiants Google.
+## Installation 🔧
 
-## Lancement du projet 🏃
+1. Clone the repository
+2. Copy `.env.example` to `.env` and configure your Google credentials
+3. Run `npm install` or `pnpm install` to install dependencies
 
-1. Installez toutes les dépendances avec `npm install` ou `pnpm install`.
-2. Lancez le serveur de développement avec `npm run dev` ou `pnpm run dev`.
-3. Ouvrez [http://localhost:3000](http://localhost:3000) pour voir votre application en action.
+## Usage 🏃
 
-## Déploiement 🌐
+Run `npm run dev` or `pnpm run dev` to start the development server. Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-Suivez les instructions de configuration initiale et d'installation des dépendances, puis déployez sur le serveur ou la plateforme de votre choix.
+## Deployment 🌐
 
-## Contribution 👥
+After setting up the `.env` and installing dependencies, deploy your app to a hosting service of your choice.
 
-Toutes les contributions sont les bienvenues ! N'hésitez pas à soumettre des PRs ou des issues.
+## Roadmap ✨
 
-## Licence ⚖️
+Future updates include:
 
-Ce projet est sous licence [INSÉREZ_TYPE_LICENCE_ICI]. Consultez le fichier `LICENSE` pour plus d'informations.
+- Regular Login System
+- Emailing System for user engagement
+
+## Contributing 👥
+
+Contributions are welcome. Please read `CONTRIBUTING.md` for details on our code of conduct and the process for submitting pull requests.
+
+## Contact 📧
+
+[Your Name] - [Your Email]
+
+Project Link: [https://github.com/AlxFrst/nextjs14-nextauth-prisma](https://github.com/AlxFrst/nextjs14-nextauth-prisma)
 
 ---
 
-Nous espérons que ce modèle vous aidera à démarrer rapidement votre projet Next.js! 🚀
+Happy coding!
