@@ -31,8 +31,10 @@ After setting up the `.env` and installing dependencies, deploy your app to a ho
 An example API route is provided to demonstrate the usage and structure:
 
 - `/src/api/example/route.ts`: This file contains a brief example of how to set up an API endpoint in the Next.js environment using the template structure.
+- `/src/app/about/page.tsx`: This file contains a brief example of how to set up a page in the Next.js environment using the template structure.
+- `/src/components/navbar.tsx`: This file contains a brief example of how to set up a component in the Next.js environment using the template structure. (Note: this component use Shadcn UI components)
 
-Explore this example to understand how to structure your API routes within this template.
+Explore this example to understand how to structure your pages, components, and API routes.
 
 ## Roadmap ✨
 
