@@ -15,7 +15,7 @@ export default async function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
+            Template by Alx. Powered by{' '}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
