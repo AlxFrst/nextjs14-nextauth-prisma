@@ -47,12 +47,6 @@ Future updates include:
 
 Contributions are welcome. Please read `CONTRIBUTING.md` for details on our code of conduct and the process for submitting pull requests.
 
-## Contact 📧
-
-[Your Name] - [Your Email]
-
-Project Link: [https://github.com/AlxFrst/nextjs14-nextauth-prisma](https://github.com/AlxFrst/nextjs14-nextauth-prisma)
-
 ---
 
 Happy coding!
