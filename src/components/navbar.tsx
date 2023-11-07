@@ -1,14 +1,14 @@
 'use client';
 import React from 'react'
-import { getServerSession } from 'next-auth'
-import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
 import SignInButton from './signInButton'
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem } from '@/components/ui/dropdown-menu'
-import { LogIn, LogOut } from 'lucide-react'
 import { signOut } from 'next-auth/react'
+import { DarkModeButton } from './darkModeButton';
+import { useTheme } from 'next-themes';
 
 export default function navbar(session: any) {
+    const { setTheme } = useTheme()
     return (
         <nav className="bg-white border-gray-200 dark:bg-gray-900">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -31,7 +31,15 @@ export default function navbar(session: any) {
                                         <DropdownMenuSeparator />
                                         <DropdownMenuItem>Profile</DropdownMenuItem>
                                         <DropdownMenuItem>Billing</DropdownMenuItem>
-                                        <DropdownMenuItem>Team</DropdownMenuItem>
+                                            <DropdownMenuItem onClick={() => setTheme("light")}>
+                                                Light
+                                            </DropdownMenuItem>
+                                            <DropdownMenuItem onClick={() => setTheme("dark")}>
+                                                Dark
+                                            </DropdownMenuItem>
+                                            <DropdownMenuItem onClick={() => setTheme("system")}>
+                                                System
+                                            </DropdownMenuItem>
                                         <DropdownMenuItem onClick={() => signOut()}>Logout</DropdownMenuItem>
                                     </DropdownMenuContent>
                                 </DropdownMenu>
