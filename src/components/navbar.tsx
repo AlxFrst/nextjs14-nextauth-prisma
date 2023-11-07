@@ -1,10 +1,9 @@
 'use client';
 import React from 'react'
-import { Avatar, AvatarImage } from '@/components/ui/avatar'
 import SignInButton from './signInButton'
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem } from '@/components/ui/dropdown-menu'
-import { signOut } from 'next-auth/react'
-import { DarkModeButton } from './darkModeButton';
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuShortcut, DropdownMenuSubTrigger, DropdownMenuPortal, DropdownMenuSubContent, DropdownMenuSub, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem, DropdownMenuGroup } from '@/components/ui/dropdown-menu'
+import { Avatar, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button'
 import { useTheme } from 'next-themes';
 
 export default function navbar(session: any) {
@@ -21,26 +20,60 @@ export default function navbar(session: any) {
                         {session.session ? (
                             <>
                                 <DropdownMenu>
-                                    <DropdownMenuTrigger>
+                                    <DropdownMenuTrigger asChild>
                                         <Avatar>
                                             <AvatarImage src={session.session.user.image} />
                                         </Avatar>
                                     </DropdownMenuTrigger>
-                                    <DropdownMenuContent>
-                                        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                                    <DropdownMenuContent className="w-56">
+                                        <DropdownMenuLabel>{session.session.user.name}</DropdownMenuLabel>
                                         <DropdownMenuSeparator />
-                                        <DropdownMenuItem>Profile</DropdownMenuItem>
-                                        <DropdownMenuItem>Billing</DropdownMenuItem>
-                                            <DropdownMenuItem onClick={() => setTheme("light")}>
-                                                Light
+                                        <DropdownMenuGroup>
+                                            <DropdownMenuItem>
+                                                Profile
+                                                <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
                                             </DropdownMenuItem>
-                                            <DropdownMenuItem onClick={() => setTheme("dark")}>
-                                                Dark
+                                            <DropdownMenuItem>
+                                                Billing
+                                                <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
                                             </DropdownMenuItem>
-                                            <DropdownMenuItem onClick={() => setTheme("system")}>
-                                                System
+                                            <DropdownMenuItem>
+                                                Settings
+                                                <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
                                             </DropdownMenuItem>
-                                        <DropdownMenuItem onClick={() => signOut()}>Logout</DropdownMenuItem>
+                                            <DropdownMenuItem>
+                                                Keyboard shortcuts
+                                                <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+                                            </DropdownMenuItem>
+                                        </DropdownMenuGroup>
+                                        <DropdownMenuSeparator />
+                                        <DropdownMenuGroup>
+                                            <DropdownMenuItem>Team</DropdownMenuItem>
+                                            <DropdownMenuSub>
+                                                <DropdownMenuSubTrigger>Invite users</DropdownMenuSubTrigger>
+                                                <DropdownMenuPortal>
+                                                    <DropdownMenuSubContent>
+                                                        <DropdownMenuItem>Email</DropdownMenuItem>
+                                                        <DropdownMenuItem>Message</DropdownMenuItem>
+                                                        <DropdownMenuSeparator />
+                                                        <DropdownMenuItem>More...</DropdownMenuItem>
+                                                    </DropdownMenuSubContent>
+                                                </DropdownMenuPortal>
+                                            </DropdownMenuSub>
+                                            <DropdownMenuItem>
+                                                New Team
+                                                <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
+                                            </DropdownMenuItem>
+                                        </DropdownMenuGroup>
+                                        <DropdownMenuSeparator />
+                                        <DropdownMenuItem>GitHub</DropdownMenuItem>
+                                        <DropdownMenuItem>Support</DropdownMenuItem>
+                                        <DropdownMenuItem disabled>API</DropdownMenuItem>
+                                        <DropdownMenuSeparator />
+                                        <DropdownMenuItem>
+                                            Log out
+                                            <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+                                        </DropdownMenuItem>
                                     </DropdownMenuContent>
                                 </DropdownMenu>
                             </>
