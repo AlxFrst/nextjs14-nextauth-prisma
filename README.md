@@ -16,7 +16,7 @@ A robust starter template to build Next.js 14 apps with integrated Prisma ORM an
 1. Clone the repository.
 2. Copy `.env.example` to `.env` and configure your Google credentials.
 3. Run `npm install` or `pnpm install` to install dependencies.
-4. Execute `npm run prisma generate` or `pnpm prisma generate` to generate Prisma client.
+4. Execute `npx prisma generate` or `pnpm prisma generate` to generate Prisma client.
 
 ## Usage 🏃
 
